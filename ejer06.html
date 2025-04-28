@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Caja con Slider</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .caja {
+            width: 400px;
+            padding: 30px;
+            background-color: #fff;
+            border: 3px solid #4CAF50;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .slider {
+            width: 100%;
+            height: 15px;
+            margin: 20px 0;
+            -webkit-appearance: none;
+            background: #ddd;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 25px;
+            height: 25px;
+            background: #4CAF50;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background .3s;
+        }
+
+        .slider::-webkit-slider-thumb:hover {
+            background: #45a049;
+        }
+
+        #valorSlider {
+            font-size: 1.2em;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        p {
+            color: #333;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="caja">
+        <h2>Control Deslizante</h2>
+        <p>Mueve el slider para ajustar el valor</p>
+        
+        <input type="range" min="0" max="100" value="50" class="slider" id="miSlider">
+        <p>Valor actual: <span id="valorSlider">50</span></p>
+        
+        <p>Este es un ejemplo de texto centrado dentro de la caja. La caja tiene un borde verde, fondo blanco y un efecto de sombra suave.</p>
+    </div>
+
+    <script>
+        const slider = document.getElementById("miSlider");
+        const output = document.getElementById("valorSlider");
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+    </script>
+</body>
+</html>

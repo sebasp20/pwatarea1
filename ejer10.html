@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Biografía</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Contenedor principal */
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Contenido principal */
+        main {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Barra lateral */
+        aside {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .perfil-img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .info-contacto {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-contacto h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .habilidades {
+            list-style: none;
+        }
+
+        .habilidades li {
+            background: #3498db;
+            color: white;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* Diseño responsivo */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Oswaldo Peñafiel </h1>
+        <p>Desarrollador Web & Diseñador</p>
+    </header>
+
+    <div class="container">
+        <main>
+            <section class="section">
+                <h2>Sobre Mí</h2>
+                <p>Soy un apasionado desarrollador web con experiencia en crear soluciones digitales innovadoras. Me especializo en el desarrollo frontend y diseño de experiencias de usuario.</p>
+            </section>
+
+            <section class="section">
+                <h2>Experiencia</h2>
+                <p>He trabajado en diversos proyectos web, desde sitios corporativos hasta aplicaciones web complejas. Mi enfoque siempre ha sido crear interfaces intuitivas y accesibles.</p>
+            </section>
+
+            <section class="section">
+                <h2>Educación</h2>
+                <p>Estudiante de Ingeniería en sistemas. Constantemente me mantengo actualizado con las últimas tecnologías y tendencias del sector.</p>
+            </section>
+        </main>
+
+        <aside>
+            <img src="https://lh3.google.com/g1smui/AGtS8XW4EUj_EFuB7hEpZcZJ7tCadXn_lmYreSiZ_JR0M3-MyjdAPO0S69DT=w1920-h912" alt="Foto de perfil" class="perfil-img">
+            
+            <div class="info-contacto">
+                <h3>Información de Contacto</h3>
+                <p>📧 sebastianpenafiel@gmail.com</p>
+                <p>📱 +593 96 059 6359</p>
+                <p>📍 Guayaquil, Ecuador</p>
+            </div>
+
+            <div class="info-contacto">
+                <h3>Habilidades</h3>
+                <ul class="habilidades">
+                    <li>HTML5 & CSS3</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Tu Nombre - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Navegación</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .nav-container {
+            background-color: #333;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu .interno a {
+            background-color: #4CAF50;
+        }
+
+        .nav-menu .interno a:hover,
+        .nav-menu .interno a:active {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .nav-menu .social a {
+            background-color: #2196F3;
+        }
+
+        .nav-menu .social a:hover,
+        .nav-menu .social a:active {
+            background-color: #1976D2;
+            transform: translateY(-2px);
+        }
+
+        .contenido {
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        section {
+            min-height: 400px;
+            padding: 2rem;
+            margin: 1rem 0;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <ul class="nav-menu">
+            <!-- Enlaces internos -->
+            <li class="interno"><a href="#inicio">Inicio</a></li>
+            <li class="interno"><a href="#servicios">Servicios</a></li>
+            <li class="interno"><a href="#productos">Productos</a></li>
+            <li class="interno"><a href="#contacto">Contacto</a></li>
+            
+            <!-- Enlaces a redes sociales -->
+            <li class="social"><a href="https://facebook.com" target="_blank">Facebook</a></li>
+            <li class="social"><a href="https://twitter.com" target="_blank">Twitter</a></li>
+            <li class="social"><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenido">
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <p>Bienvenido a nuestra página principal.</p>
+        </section>
+
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <p>Nuestros servicios principales.</p>
+        </section>
+
+        <section id="productos">
+            <h2>Productos</h2>
+            <p>Catálogo de productos disponibles.</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Información de contacto.</p>
+        </section>
+    </div>
+</body>
+</html>

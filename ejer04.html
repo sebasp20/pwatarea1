@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario basico</title>
+    <style>
+        .mensaje {
+            display: none;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    
+    <form id="miFormulario" onsubmit="return mostrarMensaje(event)">
+        <div>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <br>
+        <div>
+            <label for="email">Correo Electrónico:</label><br>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <br>
+        <div>
+            <label for="edad">Edad:</label><br>
+            <input type="number" id="edad" name="edad" min="0" max="120" required>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+
+    <div id="mensajeExito" class="mensaje">
+        ¡Formulario enviado con éxito!
+    </div>
+
+    <script>
+        function mostrarMensaje(event) {
+            event.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const edad = document.getElementById('edad').value;
+            const mensaje = document.getElementById('mensajeExito');
+            mensaje.style.display = 'block';
+            mensaje.innerHTML = `¡Gracias ${nombre}! Tus datos han sido registrados:<br>
+                               Email: ${email}<br>
+                               Edad: ${edad} años`;
+            document.getElementById('miFormulario').reset();
+
+            return false;
+        }
+    </script>
+</body>
+</html>
